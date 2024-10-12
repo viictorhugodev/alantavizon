@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentación Impactante 3.0</title>
+  <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/moon.css" id="theme"> <!-- Tema oscuro y futurista -->
+  <style>
+    /* Personalización adicional del diseño */
+    body {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Fondo degradado moderno */
+      font-family: 'Montserrat', sans-serif;
+      color: #fff;
+    }
+    h1, h2, h3 {
+      text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+      letter-spacing: 1px;
+    }
+    p {
+      font-size: 1.2em;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+    img {
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      transition: transform 0.4s ease;
+    }
+    img:hover {
+      transform: scale(1.08);
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- Diapositiva 1 -->
+      <section>
+        <h1>Inicia una Presentación Extraordinaria</h1>
+        <p>Prepárate para una experiencia visual sin igual.</p>
+        <img src="https://picsum.photos/1000/500?random=10" alt="Imagen Impactante 1" style="width:80%; margin-top:20px;">
+      </section>
+
+      <!-- Diapositiva 2 -->
+      <section>
+        <h2>Diapositiva llena de Estilo</h2>
+        <p>Contenido claro y poderoso.</p>
+        <img src="https://picsum.photos/1000/500?random=11" alt="Imagen Estilo 2" style="width:80%; margin-top:20px;">
+      </section>
+
+      <!-- Diapositiva 3 con video de fondo -->
+      <section data-background-video="https://www.w3schools.com/html/mov_bbb.mp4" data-background-video-loop>
+        <h2>Visual con Video en Movimiento</h2>
+        <p>Capta la atención con este espectacular video de fondo.</p>
+      </section>
+
+      <!-- Diapositiva 4 -->
+      <section>
+        <h2>Diseño Minimalista</h2>
+        <p>A veces, menos es más.</p>
+        <img src="https://picsum.photos/1000/500?random=12" alt="Imagen Minimalista" style="width:80%; margin-top:20px;">
+      </section>
+
+      <!-- Diapositiva 5 con fondo de imagen -->
+      <section data-background="https://picsum.photos/2000/1000?random=13">
+        <h2>Impacto Visual Absoluto</h2>
+        <p>Con una imagen de fondo poderosa.</p>
+      </section>
+
+      <!-- Diapositiva 6 -->
+      <section>
+        <h2>Contenido Claro y Elegante</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel justo arcu.</p>
+        <img src="https://picsum.photos/1000/500?random=14" alt="Imagen Elegante" style="width:80%; margin-top:20px;">
+      </section>
+
+      <!-- Diapositiva 7 con efecto de paralaje -->
+      <section data-background="https://picsum.photos/1920/1080?random=15" data-background-parallax="0.5">
+        <h3>Efecto de Paralaje</h3>
+        <p>Las imágenes se mueven mientras cambias de diapositiva.</p>
+      </section>
+
+      <!-- Diapositiva 8 -->
+      <section>
+        <h2>Despliega tu Creatividad</h2>
+        <p>Utiliza imágenes impactantes y llamativas.</p>
+        <img src="https://picsum.photos/1000/500?random=16" alt="Imagen Creativa" style="width:80%; margin-top:20px;">
+      </section>
+
+      <!-- Diapositiva 9 -->
+      <section>
+        <h2>Mensajes Potentes</h2>
+        <p>Usa tus palabras sabiamente.</p>
+        <img src="https://picsum.photos/1000/500?random=17" alt="Imagen Mensaje Potente" style="width:80%; margin-top:20px;">
+      </section>
+
+      <!-- Diapositiva 10 -->
+      <section>
+        <h1>¡Gracias por tu atención!</h1>
+        <p>Espero que hayas disfrutado de esta presentación visualmente asombrosa.</p>
+        <img src="https://picsum.photos/1000/500?random=18" alt="Imagen de Cierre" style="width:80%; margin-top:20px;">
+      </section>
+    </div>
+  </div>
+
+  <script src="node_modules/reveal.js/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      transition: 'slide', // Transiciones suaves entre diapositivas
+      backgroundTransition: 'convex', // Efecto de transición en fondos
+      transitionSpeed: 'fast', // Velocidad rápida
+      controls: true,
+      progress: true,
+      slideNumber: true,
+      history: true,
+      keyboard: true,
+      parallaxBackgroundImage: 'https://picsum.photos/1920/1080?random=19', // Imagen de paralaje en todas las diapositivas
+      parallaxBackgroundSize: '2100px 900px', // Tamaño de fondo
+      dependencies: [
+        { src: 'plugin/markdown/marked.js' },
+        { src: 'plugin/markdown/markdown.js' }
+      ]
+    });
+  </script>
+</body>
+</html>

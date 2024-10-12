@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentación Impactante 2.0</title>
+  <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/black.css" id="theme"> <!-- Tema oscuro y elegante -->
+  <style>
+    /* Personalización adicional del diseño */
+    body {
+      background: linear-gradient(to right, #232526, #414345); /* Fondo oscuro con un degradado */
+      font-family: 'Helvetica', sans-serif;
+      color: #fff;
+    }
+    h1, h2, h3 {
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+    .reveal .slides section img {
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+      border-radius: 15px;
+      transition: transform 0.5s ease;
+    }
+    .reveal .slides section img:hover {
+      transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- Diapositiva 1 -->
+      <section>
+        <h1>Bienvenido a la Nueva Era de Presentaciones</h1>
+        <p>Deslúmbrate con transiciones visuales y contenido impactante.</p>
+        <img src="https://picsum.photos/1000/500?random=5" alt="Imagen Impactante 5" style="width:80%; margin-top:20px;">
+      </section>
+
+      <!-- Diapositiva 2 -->
+      <section>
+        <h2>Contenido que Resalta</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at ipsum.</p>
+        <img src="https://picsum.photos/1000/500?random=6" alt="Imagen Impactante 6" style="width:80%; margin-top:20px;">
+      </section>
+
+      <!-- Diapositiva 3 (con video de fondo) -->
+      <section data-background-video="https://www.w3schools.com/html/mov_bbb.mp4" data-background-video-loop>
+        <h2>Visuales Increíbles con Video de Fondo</h2>
+        <p>Atrévete a usar videos para captar la atención de todos.</p>
+        <p style="color: #f39c12;">¡Todo en movimiento!</p>
+      </section>
+
+      <!-- Diapositiva 4 (fondo de imagen) -->
+      <section data-background="https://picsum.photos/2000/1000?random=7">
+        <h3>Gracias por tu atención</h3>
+        <p>Finalizamos con un mensaje fuerte y claro.</p>
+      </section>
+    </div>
+  </div>
+
+  <script src="node_modules/reveal.js/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      transition: 'zoom', // Transición de zoom entre diapositivas
+      backgroundTransition: 'fade', // Transición suave entre fondos
+      transitionSpeed: 'fast', // Transiciones rápidas
+      controls: true,
+      progress: true,
+      slideNumber: true,
+      history: true,
+      keyboard: true,
+      parallaxBackgroundImage: 'https://picsum.photos/1920/1080?random=8', // Imagen de fondo de paralaje
+      parallaxBackgroundSize: '2100px 900px' // Tamaño del fondo de paralaje
+    });
+  </script>
+</body>
+</html>
+
