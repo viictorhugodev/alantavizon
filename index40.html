@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exposición Histórica con Reveal.js</title>
+  <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/black.css" id="theme"> <!-- Tema oscuro y formal -->
+  <style>
+    /* Eliminar márgenes y asegurar que ocupen toda la pantalla */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden; /* Evitar desplazamiento horizontal */
+    }
+
+    /* Contenedor global */
+    .contenedor-global {
+      display: block;
+    }
+
+    /* Contenedor principal ocupa el 100% del viewport */
+    .contenedor-principal {
+      height: 100vh; /* Ocupa el 100% de la pantalla */
+      background-image: url('../app-presentation/public/b1.jpeg'); /* Imagen de fondo */
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+    }
+    .contenedor-principal h1 {
+      font-size: 3em;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+    .contenedor-principal p {
+      font-size: 1.5em;
+      margin-top: 20px;
+    }
+    .contenedor-principal a {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .contenedor-principal a:hover {
+      background-color: #555;
+    }
+
+    /* Configuración de Reveal.js */
+    .reveal {
+      height: 100vh;
+      display: block;
+    }
+
+    /* Estilos de las diapositivas de Reveal.js */
+    .slides section {
+      height: 100vh; /* Cada sección de la presentación ocupa el 100% de la pantalla */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    /* Estilos de encabezados y párrafos dentro de las diapositivas */
+    h1, h2, h3 {
+      color: #fff;
+      text-align: center;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    p {
+      font-size: 1.2em;
+      text-align: center;
+      margin: 20px 10%;
+      color: #fff;
+    }
+
+    img {
+      border: 2px solid #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      width: 80%;
+      transition: transform 0.4s ease;
+    }
+
+    img:hover {
+      transform: scale(1.1); /* Zoom en las imágenes al pasar el ratón */
+    }
+
+    /* Estilo especial para fondo completo */
+    section.full-background {
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+    }
+
+    /* Listas animadas para las diapositivas */
+    ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.5em;
+      text-align: center;
+      color: #fff;
+    }
+
+    ul li {
+      margin: 20px 0;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.5s ease;
+    }
+
+    ul li.fragment.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contenedor-global">
+    <!-- Contenedor principal de bienvenida -->
+    <div class="contenedor-principal">
+      <div>
+        <h1>Soy Alan Tavizon</h1>
+        <p>Estudiante de la UNAM, amante de la historia.</p>
+        <p>Contáctame para más información o colaboraciones.</p>
+        <a href="mailto:alan.tavizon@unam.mx">Contáctame</a>
+      </div>
+    </div>
+
+    <!-- Presentación de Reveal.js -->
+    <div class="reveal">
+      <div class="slides">
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/d1.jpeg');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+        
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D2.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D3.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D4.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D5.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D6.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D7.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D8.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D9.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D10.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D11.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D12.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D13.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D14.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D15.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D16.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D17.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D18.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D19.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D20.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D21.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D22.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D23.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D24.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D25.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D26.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D27.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D28.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D29.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D30.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D31.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D32.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D33.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D34.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D35.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D36.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D37.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D38.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/D39.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/d40.png');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          
+        </section>
+
+       
+
+        
+      </div>
+    </div>
+  </div>
+
+  <script src="node_modules/reveal.js/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      embedded: true, // Reveal.js se ajusta a la página y permite scroll nativo
+      controls: true,
+      progress: true,
+      slideNumber: true,
+      transition: 'convex', // Transiciones de zoom para mayor dinamismo
+      backgroundTransition: 'fade', // Transiciones suaves de fondo
+      transitionSpeed: 'fast', // Transiciones rápidas
+      history: true, // Navegación con historial del navegador
+      keyboard: true, // Permitir usar teclado para moverse entre diapositivas
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exposición Histórica con Reveal.js</title>
+  <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/black.css" id="theme"> <!-- Tema oscuro y formal -->
+  <style>
+    /* Eliminar márgenes y asegurar que ocupen toda la pantalla */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden; /* Evitar desplazamiento horizontal */
+    }
+
+    /* Contenedor global */
+    .contenedor-global {
+      display: block;
+    }
+
+    /* Contenedor principal ocupa el 100% del viewport */
+    .contenedor-principal {
+      height: 100vh; /* Ocupa el 100% de la pantalla */
+      background-image: url('https://picsum.photos/id/1005/1920/1080'); /* Imagen de fondo */
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+    }
+    .contenedor-principal h1 {
+      font-size: 3em;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+    .contenedor-principal p {
+      font-size: 1.5em;
+      margin-top: 20px;
+    }
+    .contenedor-principal a {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .contenedor-principal a:hover {
+      background-color: #555;
+    }
+
+    /* Configuración de Reveal.js */
+    .reveal {
+      height: 100vh;
+      display: block;
+    }
+
+    /* Estilos de las diapositivas de Reveal.js */
+    .slides section {
+      height: 100vh; /* Cada sección de la presentación ocupa el 100% de la pantalla */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    /* Estilos de encabezados y párrafos dentro de las diapositivas */
+    h1, h2, h3 {
+      color: #fff;
+      text-align: center;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    p {
+      font-size: 1.2em;
+      text-align: center;
+      margin: 20px 10%;
+      color: #fff;
+    }
+
+    img {
+      border: 2px solid #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      width: 80%;
+      transition: transform 0.4s ease;
+    }
+
+    img:hover {
+      transform: scale(1.1); /* Zoom en las imágenes al pasar el ratón */
+    }
+
+    /* Estilo especial para fondo completo */
+    section.full-background {
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+    }
+
+    /* Listas animadas para las diapositivas */
+    ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.5em;
+      text-align: center;
+      color: #fff;
+    }
+
+    ul li {
+      margin: 20px 0;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.5s ease;
+    }
+
+    ul li.fragment.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contenedor-global">
+    <!-- Contenedor principal de bienvenida -->
+    <div class="contenedor-principal">
+      <div>
+        <h1>Soy Alan Tavizon</h1>
+        <p>Estudiante de la UNAM, amante de la historia.</p>
+        <p>Contáctame para más información o colaboraciones.</p>
+        <a href="mailto:alan.tavizon@unam.mx">Contáctame</a>
+      </div>
+    </div>
+
+    <!-- Presentación de Reveal.js -->
+    <div class="reveal">
+      <div class="slides">
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/d1.jpeg');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+        </section>
+
+        <!-- Diapositiva 1 -->
+        <section class="full-background" style="background-image: url('../app-presentation/public/d1.jpeg');">
+          <h1>Exposición de Historia</h1>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+          <p>Una travesía a través de los grandes eventos históricos</p>
+        </section>
+
+        <!-- Diapositiva 2 con imagen de fondo -->
+        <section class="full-background" style="background-image: url('https://picsum.photos/1600/900?random=32');">
+          <h2>La Antigua Grecia</h2>
+          <p>La cuna de la civilización occidental</p>
+          <ul>
+            <li class="fragment">Filosofía: Sócrates, Platón, Aristóteles</li>
+            <li class="fragment">Democracia ateniense</li>
+            <li class="fragment">Arte y Arquitectura clásica</li>
+          </ul>
+        </section>
+
+        <!-- Diapositiva 3 con paralaje -->
+        <section data-background="https://picsum.photos/1600/900?random=33" data-background-parallax="0.2">
+          <h2>El Imperio Romano</h2>
+          <p>El auge y la caída del mayor imperio de la antigüedad</p>
+          <ul>
+            <li class="fragment">La expansión militar</li>
+            <li class="fragment">El derecho romano</li>
+            <li class="fragment">Innovaciones arquitectónicas</li>
+          </ul>
+        </section>
+
+        <!-- Diapositiva 4 imagen grande -->
+        <section>
+          <h2>La Revolución Industrial</h2>
+          <img src="https://picsum.photos/1600/900?random=34" alt="Revolución Industrial">
+          <p>Transformación económica y social a través de la tecnología</p>
+        </section>
+
+      <!-- Diapositiva 4 imagen grande -->
+      <section>
+        <h2>Otra cosa</h2>
+        <img src="https://picsum.photos/1600/900?random=34" alt="Revolución Industrial">
+        <p>Totro texto</p>
+      </section>
+
+        <!-- Diapositiva 5 de cierre -->
+        <section class="full-background" style="background-image: url('https://picsum.photos/1600/900?random=35');">
+          <h2>Gracias por su atención</h2>
+          <p>El pasado ilumina el futuro</p>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script src="node_modules/reveal.js/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      embedded: true, // Reveal.js se ajusta a la página y permite scroll nativo
+      controls: true,
+      progress: true,
+      slideNumber: true,
+      transition: 'convex', // Transiciones de zoom para mayor dinamismo
+      backgroundTransition: 'fade', // Transiciones suaves de fondo
+      transitionSpeed: 'fast', // Transiciones rápidas
+      history: true, // Navegación con historial del navegador
+      keyboard: true, // Permitir usar teclado para moverse entre diapositivas
+    });
+  </script>
+</body>
+</html>

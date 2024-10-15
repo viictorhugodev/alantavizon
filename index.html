@@ -1,206 +1,429 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exposición Histórica</title>
-  <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
-  <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/league.css" id="theme"> <!-- Tema clásico y formal -->
-  <style>
-    /* Personalización adicional del diseño */
-    body {
-      background: #f4f4f4; /* Fondo claro para el tema histórico */
-      font-family: 'Times New Roman', serif;
-      color: #333;
-    }
-    h1, h2, h3 {
-      text-align: center;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    }
-    p {
-      font-size: 1.2em;
-      text-align: justify;
-      margin: 0 10%;
-    }
-    img {
-      border: 2px solid #555;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      transition: transform 0.4s ease;
-    }
-    img:hover {
-      transform: scale(1.05);
-    }
-  </style>
-</head>
-<body>
-  <div class="reveal">
-    <div class="slides">
-      <!-- Diapositiva 1 -->
-      <section>
-        <h1>Exposición de Historia</h1>
-        <p>Bienvenidos a una exploración del pasado a través de los ojos de los grandes historiadores.</p>
-        <img src="https://picsum.photos/1000/500?random=21" alt="Imagen Histórica 1" style="width:80%; margin-top:20px;">
-      </section>
+  <!DOCTYPE html>
+  <html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exposición Histórica con Reveal.js</title>
+    <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/black.css" id="theme"> <!-- Tema oscuro y formal -->
+    <style>
+      /* Eliminar márgenes y asegurar que ocupen toda la pantalla */
+      body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow-x: hidden; /* Evitar desplazamiento horizontal */
+      }
 
-      <!-- Diapositiva 2 -->
-      <section>
-        <h2>Introducción a la Historia Antigüa</h2>
-        <p>El viaje hacia los primeros días de la civilización humana comienza con la Mesopotamia y Egipto.</p>
-        <img src="https://picsum.photos/1000/500?random=22" alt="Mesopotamia" style="width:80%; margin-top:20px;">
-      </section>
+      /* Contenedor global */
+      .contenedor-global {
+        display: block;
+      }
 
-      <!-- Diapositiva 3 -->
-      <section>
-        <h2>La Edad de Oro de Grecia</h2>
-        <p>La Grecia Antigua nos dejó un legado monumental en filosofía, ciencia y arte.</p>
-        <img src="https://picsum.photos/1000/500?random=23" alt="Grecia Antigua" style="width:80%; margin-top:20px;">
-      </section>
+      /* Contenedor principal ocupa el 100% del viewport */
+      .contenedor-principal {
+        height: 100vh; /* Ocupa el 100% de la pantalla */
+        background-image: url('../app-presentation/public/b1.jpeg'); /* Imagen de fondo */
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+      }
 
-      <!-- Diapositiva 4 -->
-      <section>
-        <h2>El Imperio Romano</h2>
-        <p>Roma construyó uno de los imperios más grandes de la historia, con avances en leyes, arquitectura y gobierno.</p>
-        <img src="https://picsum.photos/1000/500?random=24" alt="Imperio Romano" style="width:80%; margin-top:20px;">
-      </section>
+      .fondo-transparente {
+        background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con transparencia */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para resaltar más */
+      }
 
-      <!-- Diapositiva 5 -->
-      <section>
-        <h2>La Edad Media</h2>
-        <p>El colapso de Roma dio lugar a un periodo de mil años marcado por guerras, cruzadas y el feudalismo.</p>
-        <img src="https://picsum.photos/1000/500?random=25" alt="Edad Media" style="width:80%; margin-top:20px;">
-      </section>
+      .contenedor-principal h1 {
+        font-size: 3em;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      }
+      .contenedor-principal p {
+        font-size: 1.5em;
+        margin-top: 20px;
+      }
+      .contenedor-principal a {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      .contenedor-principal a:hover {
+        background-color: #555;
+      }
 
-      <!-- Diapositiva 6 -->
-      <section>
-        <h2>Renacimiento</h2>
-        <p>El Renacimiento fue un despertar cultural en Europa, con avances en arte, ciencia y exploración.</p>
-        <img src="https://picsum.photos/1000/500?random=26" alt="Renacimiento" style="width:80%; margin-top:20px;">
-      </section>
+      /* Configuración de Reveal.js */
+      .reveal {
+        height: 100vh;
+        display: block;
+      }
 
-      <!-- Diapositiva 7 -->
-      <section>
-        <h2>Las Grandes Exploraciones</h2>
-        <p>Desde Cristóbal Colón hasta Magallanes, los exploradores descubrieron nuevos mundos.</p>
-        <img src="https://picsum.photos/1000/500?random=27" alt="Exploraciones" style="width:80%; margin-top:20px;">
-      </section>
+      /* Estilos de las diapositivas de Reveal.js */
+      .slides section {
+        height: 100vh; /* Cada sección de la presentación ocupa el 100% de la pantalla */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+      }
 
-      <!-- Diapositiva 8 -->
-      <section>
-        <h2>La Revolución Industrial</h2>
-        <p>El mundo cambió para siempre cuando la maquinaria y la industria tomaron el control.</p>
-        <img src="https://picsum.photos/1000/500?random=28" alt="Revolución Industrial" style="width:80%; margin-top:20px;">
-      </section>
+      /* Estilos de encabezados y párrafos dentro de las diapositivas */
+      h1, h2, h3 {
+        color: #fff;
+        text-align: center;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      }
 
-      <!-- Diapositiva 9 -->
-      <section>
-        <h2>Guerras Mundiales</h2>
-        <p>El siglo XX fue testigo de dos de los conflictos más devastadores de la historia humana.</p>
-        <img src="https://picsum.photos/1000/500?random=29" alt="Guerras Mundiales" style="width:80%; margin-top:20px;">
-      </section>
+      p {
+        font-size: 1.2em;
+        text-align: center;
+        margin: 20px 10%;
+        color: #fff;
+      }
 
-      <!-- Diapositiva 10 -->
-      <section>
-        <h2>Era Espacial</h2>
-        <p>El lanzamiento del Sputnik y el alunizaje en la Luna marcaron el inicio de la era espacial.</p>
-        <img src="https://picsum.photos/1000/500?random=30" alt="Era Espacial" style="width:80%; margin-top:20px;">
-      </section>
+      img {
+        border: 2px solid #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        width: 80%;
+        transition: transform 0.4s ease;
+      }
 
-      <!-- Diapositiva 11 -->
-      <section>
-        <h2>Diapositiva 11</h2>
-        <p>Texto de contenido histórico.</p>
-        <img src="https://picsum.photos/1000/500?random=31" alt="Imagen Histórica 11" style="width:80%; margin-top:20px;">
-      </section>
+      img:hover {
+        transform: scale(1.1); /* Zoom en las imágenes al pasar el ratón */
+      }
 
-      <!-- Diapositiva 12 -->
-      <section>
-        <h2>Diapositiva 12</h2>
-        <p>Texto de contenido histórico.</p>
-        <img src="https://picsum.photos/1000/500?random=32" alt="Imagen Histórica 12" style="width:80%; margin-top:20px;">
-      </section>
+      /* Estilo especial para fondo completo */
+      section.full-background {
+        background-size: contain; /* Cambia cover por contain para que quepa todo */
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 100%;
+        height: 100%;
+      }
 
-      <!-- Diapositiva 13 -->
-      <section>
-        <h2>Diapositiva 13</h2>
-        <p>Texto de contenido histórico.</p>
-        <img src="https://picsum.photos/1000/500?random=33" alt="Imagen Histórica 13" style="width:80%; margin-top:20px;">
-      </section>
+      /* Listas animadas para las diapositivas */
+      ul {
+        list-style: none;
+        padding: 0;
+        font-size: 1.5em;
+        text-align: center;
+        color: #fff;
+      }
 
-      <!-- Diapositiva 14 -->
-      <section>
-        <h2>Diapositiva 14</h2>
-        <p>Texto de contenido histórico.</p>
-        <img src="https://picsum.photos/1000/500?random=34" alt="Imagen Histórica 14" style="width:80%; margin-top:20px;">
-      </section>
+      ul li {
+        margin: 20px 0;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.5s ease;
+      }
 
-      <!-- Diapositiva 15 -->
-      <section>
-        <h2>Diapositiva 15</h2>
-        <p>Texto de contenido histórico.</p>
-        <img src="https://picsum.photos/1000/500?random=35" alt="Imagen Histórica 15" style="width:80%; margin-top:20px;">
-      </section>
+      ul li.fragment.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
 
-      <!-- Diapositiva 16 -->
-      <section>
-        <h2>Diapositiva 16</h2>
-        <p>Texto de contenido histórico.</p>
-        <img src="https://picsum.photos/1000/500?random=36" alt="Imagen Histórica 16" style="width:80%; margin-top:20px;">
-      </section>
+    <div class="contenedor-global">
+      <!-- Contenedor principal de bienvenida -->
+      <div class="contenedor-principal">
+        <div class="fondo-transparente">
+          <h1>Alan Tavizón</h1>
+          <p>Posgrado en Estudios Mesoamericanos.</p>
+          <h1>UNAM</h1>
+          <a href="mailto:alanggtavizon@gmail.com">Contáctame</a>
+        </div>
+      </div>
 
-      <!-- Diapositiva 17 -->
-      <section>
-        <h2>Diapositiva 17</h2>
-        <p>Texto de contenido histórico.</p>
-        <img src="https://picsum.photos/1000/500?random=37" alt="Imagen Histórica 17" style="width:80%; margin-top:20px;">
-      </section>
+      <!-- Presentación de Reveal.js -->
+      <div class="reveal">
+        <div class="slides">
 
-      <!-- Diapositiva 18 -->
-      <section>
-        <h2>Diapositiva 18</h2>
-        <p>Texto de contenido histórico.</p>
-        <img src="https://picsum.photos/1000/500?random=38" alt="Imagen Histórica 18" style="width:80%; margin-top:20px;">
-      </section>
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/d1.jpeg');">
+            
+            
+          </section>
+          
 
-      <!-- Diapositiva 19 -->
-      <section>
-        <h2>Diapositiva 19</h2>
-        <p>Texto de contenido histórico.</p>
-        <img src="https://picsum.photos/1000/500?random=39" alt="Imagen Histórica 19" style="width:80%; margin-top:20px;">
-      </section>
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D2.png');">
+            
+          </section>
 
-      <!-- Diapositiva 20 -->
-      <section>
-        <h2>Diapositiva 20</h2>
-        <p>Texto de contenido histórico.</p>
-        <img src="https://picsum.photos/1000/500?random=40" alt="Imagen Histórica 20" style="width:80%; margin-top:20px;">
-      </section>
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D3.png');">
+            
+            
+          </section>
 
-      <!-- Diapositivas 21 a 30 -->
-      <section>
-        <h2>Diapositiva 21</h2>
-        <p>Texto de contenido histórico.</p>
-        <img src="https://picsum.photos/1000/500?random=41" alt="Imagen Histórica 21" style="width:80%; margin-top:20px;">
-      </section>
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D4.png');">
+            
+            
+          </section>
 
-      <!-- Continúa agregando diapositivas hasta la 30 -->
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D5.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D6.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D7.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D8.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D9.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D10.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D11.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D12.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D13.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D14.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D15.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D16.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D17.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D18.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D19.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D20.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D21.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D22.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D23.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D24.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D25.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D26.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D27.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D28.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D29.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D30.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D31.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D32.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D33.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D34.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D35.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D36.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D37.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D38.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D39.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('../app-presentation/public/D40.png');">
+            
+            
+          </section>
+
+        
+
+          
+        </div>
+      </div>
+
+      <div class="reveal">
+        <section class="full-background" style="background-image: url('../app-presentation/public/b3.jpeg');">
+          <h2>Gracias por su atención</h2>
+          <p>Bibliografia 1</p>
+          <p>Bibliografia 1</p>
+          <p>Bibliografia 1</p>
+
+          <p>Bibliografia 1</p>
+          <p>El pasado ilumina el futuro</p>
+        </section>
+      </div>
     </div>
-  </div>
 
-  <script src="node_modules/reveal.js/dist/reveal.js"></script>
-  <script>
-    Reveal.initialize({
-      transition: 'fade', // Transiciones suaves entre diapositivas
-      backgroundTransition: 'slide', // Desliza los fondos para un efecto visual elegante
-      transitionSpeed: 'fast', // Transiciones rápidas
-      controls: true,
-      progress: true,
-      slideNumber: true,
-      history: true,
-      keyboard: true,
-      parallaxBackgroundImage: 'https://picsum.photos/1920/1080?random=50', // Imagen de paralaje para el fondo
-      parallaxBackgroundSize: '2100px 900px'
-    });
-  </script>
-</body>
-</html>
+    <script src="node_modules/reveal.js/dist/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        embedded: true, // Reveal.js se ajusta a la página y permite scroll nativo
+        controls: true,
+        progress: true,
+        slideNumber: true,
+        transition: 'convex', // Transiciones de zoom para mayor dinamismo
+        backgroundTransition: 'fade', // Transiciones suaves de fondo
+        transitionSpeed: 'fast', // Transiciones rápidas
+        history: true, // Navegación con historial del navegador
+        keyboard: true, // Permitir usar teclado para moverse entre diapositivas
+      });
+    </script>
+  </body>
+  </html>

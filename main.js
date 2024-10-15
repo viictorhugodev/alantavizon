@@ -1,24 +1,17 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import Reveal from 'reveal.js';
+import 'reveal.js/dist/reveal.css';
+import 'reveal.js/dist/theme/black.css'; // o el tema que estés usando
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+Reveal.initialize({
+  controls: true,
+  progress: true,
+  slideNumber: true,
+  transition: 'convex',
+  backgroundTransition: 'fade',
+  transitionSpeed: 'fast',
+  history: true,
+  keyboard: true,
+  scroll: true, // Asegúrate de tener esta opción si es necesario el desplazamiento interno.
+});
 
-setupCounter(document.querySelector('#counter'))
+
