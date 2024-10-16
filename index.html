@@ -113,6 +113,21 @@
         height: 100%;
       }
 
+      @media (max-width: 768px) and (orientation: portrait) {
+          section.full-background {
+            background-size: cover; /* Forzar cover en portrait */
+            background-position: center;
+          }
+
+          .contenedor-principal h1 {
+            font-size: 2em; /* Ajustar tamaño de texto para pantallas pequeñas */
+          }
+
+          .contenedor-principal p {
+            font-size: 1.2em;
+          }
+        }
+
       /* Listas animadas para las diapositivas */
       ul {
         list-style: none;
