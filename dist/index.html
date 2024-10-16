@@ -1,0 +1,428 @@
+  <!DOCTYPE html>
+  <html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exposición Histórica con Reveal.js</title> <!-- Tema oscuro y formal -->
+    <style>
+      /* Eliminar márgenes y asegurar que ocupen toda la pantalla */
+      body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow-x: hidden; /* Evitar desplazamiento horizontal */
+      }
+
+      /* Contenedor global */
+      .contenedor-global {
+        display: block;
+      }
+
+      /* Contenedor principal ocupa el 100% del viewport */
+      .contenedor-principal {
+        height: 100vh; /* Ocupa el 100% de la pantalla */
+        background-image: url('/alantavizon/b1.jpeg'); /* Imagen de fondo */
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+      }
+
+      .fondo-transparente {
+        background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con transparencia */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para resaltar más */
+      }
+
+      .contenedor-principal h1 {
+        font-size: 3em;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      }
+      .contenedor-principal p {
+        font-size: 1.5em;
+        margin-top: 20px;
+      }
+      .contenedor-principal a {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      .contenedor-principal a:hover {
+        background-color: #555;
+      }
+
+      /* Configuración de Reveal.js */
+      .reveal {
+        height: 100vh;
+        display: block;
+      }
+
+      /* Estilos de las diapositivas de Reveal.js */
+      .slides section {
+        height: 100vh; /* Cada sección de la presentación ocupa el 100% de la pantalla */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+      }
+
+      /* Estilos de encabezados y párrafos dentro de las diapositivas */
+      h1, h2, h3 {
+        color: #fff;
+        text-align: center;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      }
+
+      p {
+        font-size: 1.2em;
+        text-align: center;
+        margin: 20px 10%;
+        color: #fff;
+      }
+
+      img {
+        border: 2px solid #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        width: 80%;
+        transition: transform 0.4s ease;
+      }
+
+      img:hover {
+        transform: scale(1.1); /* Zoom en las imágenes al pasar el ratón */
+      }
+
+      /* Estilo especial para fondo completo */
+      section.full-background {
+        background-size: contain; /* Cambia cover por contain para que quepa todo */
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 100%;
+        height: 100%;
+      }
+
+      /* Listas animadas para las diapositivas */
+      ul {
+        list-style: none;
+        padding: 0;
+        font-size: 1.5em;
+        text-align: center;
+        color: #fff;
+      }
+
+      ul li {
+        margin: 20px 0;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.5s ease;
+      }
+
+      ul li.fragment.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+    <link rel="stylesheet" crossorigin href="/alantavizon/assets/index-ChMyPaTA.css">
+  </head>
+  <body>
+
+    <div class="contenedor-global">
+      <!-- Contenedor principal de bienvenida -->
+      <div class="contenedor-principal">
+        <div class="fondo-transparente">
+          <h1>Alan Tavizón</h1>
+          <p>Posgrado en Estudios Mesoamericanos.</p>
+          <h1>UNAM</h1>
+          <a href="mailto:alanggtavizon@gmail.com">Contáctame</a>
+        </div>
+      </div>
+
+      <!-- Presentación de Reveal.js -->
+      <div class="reveal">
+        <div class="slides">
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/d1.jpeg');">
+            
+            
+          </section>
+          
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D2.png');">
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D3.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D4.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D5.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D6.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D7.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D8.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D9.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D10.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D11.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D12.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D13.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D14.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D15.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D16.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D17.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D18.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D19.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D20.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D21.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D22.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D23.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D24.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D25.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D26.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D27.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D28.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D29.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D30.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D31.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D32.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D33.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D34.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D35.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D36.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D37.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D38.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D39.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/D40.png');">
+            
+            
+          </section>
+
+        
+
+          
+        </div>
+      </div>
+
+      <div class="reveal">
+        <section class="full-background" style="background-image: url('/alantavizon/assets/b3-BmsEX7PT.jpeg');">
+          <h2>Gracias por su atención</h2>
+          <p>Bibliografia 1</p>
+          <p>Bibliografia 1</p>
+          <p>Bibliografia 1</p>
+
+          <p>Bibliografia 1</p>
+          <p>El pasado ilumina el futuro</p>
+        </section>
+      </div>
+    </div>
+
+    <script src="node_modules/reveal.js/dist/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        embedded: true, // Reveal.js se ajusta a la página y permite scroll nativo
+        controls: true,
+        progress: true,
+        slideNumber: true,
+        transition: 'convex', // Transiciones de zoom para mayor dinamismo
+        backgroundTransition: 'fade', // Transiciones suaves de fondo
+        transitionSpeed: 'fast', // Transiciones rápidas
+        history: true, // Navegación con historial del navegador
+        keyboard: true, // Permitir usar teclado para moverse entre diapositivas
+      });
+    </script>
+  </body>
+  </html>
