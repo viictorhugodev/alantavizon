@@ -15,6 +15,18 @@
         overflow-x: hidden; /* Evitar desplazamiento horizontal */
       }
 
+          /* Animación para la entrada de .contenedor-principal */
+        @keyframes fadeInUp {
+          0% {
+            opacity: 0;
+            transform: translateY(50px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
       /* Contenedor global */
       .contenedor-global {
         display: block;
@@ -22,6 +34,7 @@
 
       /* Contenedor principal ocupa el 100% del viewport */
       .contenedor-principal {
+   
         height: 100vh; /* Ocupa el 100% de la pantalla */
         background-image: url('./public/b1.jpeg'); /* Imagen de fondo */
         background-size: cover;
@@ -38,6 +51,8 @@
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para resaltar más */
+        opacity: 0;
+        animation: fadeInUp 1.5s ease forwards; 
       }
 
       .contenedor-principal h1 {
@@ -60,6 +75,10 @@
       }
       .contenedor-principal a:hover {
         background-color: #555;
+      }
+
+      .contenedor-texto {
+        
       }
 
       /* Configuración de Reveal.js */
@@ -201,6 +220,43 @@
       }
     }
 
+    /* Estilos del contenedor que envuelve al logo */
+    .contenedor-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    /* Estilos para la imagen del logo */
+    .contenedor-logo img {
+      max-width: 200px; /* Tamaño máximo para el logo en pantallas grandes */
+      width: 100%;
+      height: auto; /* Mantiene las proporciones */
+      border-radius: 10px; /* Esquinas redondeadas */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+      transition: transform 0.3s ease; /* Transición suave */
+    }
+
+    /* Zoom al pasar el ratón sobre la imagen */
+    .contenedor-logo img:hover {
+      transform: scale(1.05); /* Efecto de zoom */
+    }
+
+    /* Para pantallas pequeñas, reducir el tamaño máximo */
+    @media (max-width: 768px) {
+      .contenedor-logo img {
+        max-width: 150px; /* Reduce el tamaño en pantallas pequeñas */
+      }
+    }
+
+    @media (max-width: 454px) {
+      .contenedor-logo img {
+        max-width: 100px; /* Aún más pequeño en pantallas muy pequeñas */
+      }
+    }
+
+
 
 
 
@@ -218,6 +274,10 @@
         <div class="fondo-transparente">
           <h1>Alan Tavizón</h1>
           <p>Posgrado en Estudios Mesoamericanos.</p>
+          <div class="contenedor-logo">
+            <img src="./public/logo1.png" alt="Logo">
+          </div>
+          
           <h1>UNAM</h1>
           <a href="mailto:alanggtavizon@gmail.com">Contáctame</a>
         </div>
