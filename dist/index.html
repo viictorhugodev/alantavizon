@@ -117,6 +117,7 @@
           section.full-background {
             background-size: cover; /* Forzar cover en portrait */
             background-position: center;
+            /* background-attachment: fixed; */
           }
 
           .contenedor-principal h1 {
@@ -126,7 +127,32 @@
           .contenedor-principal p {
             font-size: 1.2em;
           }
+      }
+
+      @media (max-width: 454px) {
+        .reveal .slides section {
+          background-size: cover !important; /* Asegura que la imagen cubra toda la pantalla */
+          background-position: center !important;
+          background-attachment: scroll; /* Asegura que las imágenes no desaparezcan con el scroll */
+          overflow: visible;
         }
+        /* Ajuste de fuentes y márgenes en pantallas muy pequeñas */
+        .contenedor-principal h1 {
+          font-size: 2em; /* Reducir el tamaño del texto */
+        }
+  
+        .contenedor-principal p {
+          font-size: 1em; /* Ajustar el tamaño del texto */
+        }
+  
+        .fondo-transparente {
+          padding: 10px;
+        }
+      }
+
+
+      
+
 
       /* Listas animadas para las diapositivas */
       ul {
@@ -148,15 +174,49 @@
         opacity: 1;
         transform: translateY(0);
       }
+
+         /* Mensaje para resoluciones pequeñas */
+    .mensaje-rotacion {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 20px;
+      font-size: 1.5em;
+      text-align: center;
+      z-index: 9999;
+      border-radius: 10px;
+    }
+
+        /* Mostrar el mensaje en pantallas menores o iguales a 454px */
+        @media (max-width: 454px) {
+      .mensaje-rotacion {
+        display: block;
+      }
+      .reveal .slides {
+        display: none; /* Ocultar solo el contenido de las diapositivas */
+      }
+    }
+
+
+
+
     </style>
   </head>
   <body>
+
+    <div class="mensaje-rotacion">
+      Por favor, rota tu celular para ver la presentación
+    </div>
 
     <div class="contenedor-global">
       <!-- Contenedor principal de bienvenida -->
       <div class="contenedor-principal">
         <div class="fondo-transparente">
-          <h1>Alan Tavizón !!!</h1>
+          <h1>Alan Tavizón</h1>
           <p>Posgrado en Estudios Mesoamericanos.</p>
           <h1>UNAM</h1>
           <a href="mailto:alanggtavizon@gmail.com">Contáctame</a>
@@ -234,6 +294,12 @@
           </section>
 
           <!-- Diapositiva 1 -->
+          <section class="full-background" style="background-image: url('/alantavizon/assets/D14-CGQY6qK0.png');">
+            
+            
+          </section>
+
+          <!-- Diapositiva 1 -->
           <section class="full-background" style="background-image: url('/alantavizon/assets/D12-B9UG7CC2.png');">
             
             
@@ -241,12 +307,6 @@
 
           <!-- Diapositiva 1 -->
           <section class="full-background" style="background-image: url('/alantavizon/assets/D13-CGBENzSQ.png');">
-            
-            
-          </section>
-
-          <!-- Diapositiva 1 -->
-          <section class="full-background" style="background-image: url('/alantavizon/assets/D14-CGQY6qK0.png');">
             
             
           </section>
@@ -384,10 +444,10 @@
           </section>
 
           <!-- Diapositiva 1 -->
-          <section class="full-background" style="background-image: url('/alantavizon/assets/D37-CHE6tGc1.png');">
+          <!-- <section class="full-background" style="background-image: url('./public/D37.png');">
             
             
-          </section>
+          </section> -->
 
           <!-- Diapositiva 1 -->
           <section class="full-background" style="background-image: url('/alantavizon/assets/D38-D9mGd6X6.png');">
@@ -402,19 +462,13 @@
           </section>
 
           <!-- Diapositiva 1 -->
-          <section class="full-background" style="background-image: url('/alantavizon/assets/D40-LQqImTlV.png');">
+          <!-- <section class="full-background" style="background-image: url('./public/D40.png');">
             
             
-          </section>
+          </section> -->
 
-          <section class="full-background" style="background-image: url('/alantavizon/assets/b3-BmsEX7PT.jpeg');">
-            <h2>Gracias por su atención</h2>
-            <p>Bibliografia 1</p>
-            <p>Bibliografia 1</p>
-            <p>Bibliografia 1</p>
-  
-            <p>Bibliografia 1</p>
-            <p>El pasado ilumina el futuro</p>
+          <section class="full-background" style="background-image: url('/alantavizon/assets/gracias-DOo23SWU.jpeg');">
+            
           </section>
 
           
@@ -426,6 +480,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.js"></script>
     <script>
       Reveal.initialize({
+      
         embedded: true, // Reveal.js se ajusta a la página y permite scroll nativo
         controls: true,
         progress: true,
@@ -435,7 +490,23 @@
         transitionSpeed: 'fast', // Transiciones rápidas
         history: true, // Navegación con historial del navegador
         keyboard: true, // Permitir usar teclado para moverse entre diapositivas
+        // minScale: 0.5,  // Permite escalar el contenido en pantallas más pequeñas
+        // maxScale: 1.5   // Evita que las diapositivas se reduzcan demasiado
       });
+
+      // if (window.innerWidth < 768) {
+      //   Reveal.configure({
+      //     // width: '100%',
+      //     // height: '100%',
+      //     controls: true,
+      //     progress: true,
+      //     embedded: true, // Mantener embebido en pantallas pequeñas
+      //     slideNumber: true,
+      //     transition: 'none', // Desactiva las transiciones para mejorar el rendimiento
+      //   });
+      // }
+ 
+
     </script>
   </body>
   </html>
